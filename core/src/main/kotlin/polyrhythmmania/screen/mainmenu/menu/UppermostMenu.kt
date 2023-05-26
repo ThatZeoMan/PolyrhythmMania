@@ -105,7 +105,7 @@ class UppermostMenu(menuCol: MenuCollection) : MMMenu(menuCol) {
                 "TEST: Story Mode debug screen"
             }).apply {
                 this.visible.bind { 
-                    PRMania.isDevVersion || (PRMania.isPrereleaseVersion && Paintbox.debugMode.use())
+                   true // PRMania.isDevVersion || (PRMania.isPrereleaseVersion && Paintbox.debugMode.use())
                 }
                 this.setOnAction {
                     mainMenu.main.playMenuSfx(AssetRegistry.get<Sound>("sfx_menu_enter_game"), 1f, Semitones.getALPitch(-2), 0f)
